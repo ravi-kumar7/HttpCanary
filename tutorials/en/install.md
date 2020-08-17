@@ -2,7 +2,7 @@
 
 ####  1. VPN Configuration（Necessary）
 
-HttpCanary uses VPN as a MITM(Man in the Middle) to capture network packets, so you must configure the VPN first.
+HttpCanary uses a VPN as a MITM(Man in the Middle) to capture network packets, so you must configure the VPN first.
 
 ![](/assets/install_vpn.png)
 
@@ -10,19 +10,19 @@ HttpCanary uses VPN as a MITM(Man in the Middle) to capture network packets, so 
 
 ####  2. Install root certificate（Necessary）
 
-**Due to Android system's limitations, you must draw your phone screen lock or enter the phone password when installing the certificate. If you have not set them, you need to set a screen lock or password at first.**
+**Due to Android system's limitations, you must draw your phone screen lock or enter the phone password when installing the certificate. If you have not set them, you need to set a screen lock or password first.**
 
-HttpCanary uses MITM(Man in the Middle) technology to capture the network packets or to decrypt the network packets which were encrypted with TLS/SSL in requests of HTTPS, WSS and so on protocols. So you need to install HttpCanary's root certificate first. During installation, click OK by default. Do not modify the configuration.
+HttpCanary uses MITM(Man in the Middle) technology to capture the network packets or to decrypt the network packets which were encrypted with TLS/SSL in requests of HTTPS, WSS and other protocols. So you need to install HttpCanary's root certificate first. During installation, click OK by default. Do not modify any configuration.
 
 ![](/assets/install_user_cetificate.png)
 
 <br>
 
-####  3. Upgrade the certificate to system certificate（7.0+ Strongly Recommended）
+####  3. Upgrade the certificate to system certificate（Strongly Recommended Android 7.0 (N) & above）
 
-**This step requires a Root device. It is strongly recommended to do this configuration for systems with Android 7.0 and above systems. Skip this step for 5.0-6.0 systems.**
+**This step requires a Rooted device. It is strongly recommended to do this configuration for systems with Android 7.0 and above systems. Skip this step for 5.0-6.0 systems.**
 
-From Android 7.0(Android N), Google changed the network security policy. The CA certificate installed by user will not be trusted by TLS/SSL connection by default. This means HttpCanary may not capture the packets which encrypted with TLS/SSL and can't connect to network during packet capturing. Therefore, you need to upgrade the certificate installed in last step to the system CA certificate.
+From Android 7.0(Android N), Google has updated the network security policy. The CA certificate installed by user will not be trusted by TLS/SSL connection by default. This means HttpCanary may not capture the packets which were encrypted with TLS/SSL and can't connect to network during packet capturing. Therefore, you need to upgrade the certificate installed in last step to the system CA certificate.
 
 ##### 3.1 Method one：One-click Upgrade in HttpCanary 
 
@@ -88,7 +88,7 @@ Open HttpCanary's Firefox certificate installation page, click "Install" and cho
 
 ####  5. Install parallel space (highly recommended for Android versions 7.0 - 9.0 non-root devices)
 
-For non-root users whoes device system version is Android 7.0 and above, it's strongly recommended to install parallel space to assist packet capture. Devices with Android 5.0-6.0 and 10.0+ can ignore this step.
+For non-root users with device running on Android 7.0 and above, it's strongly recommended to install parallel space to assist packet capture. Devices with Android 5.0-6.0 and 10.0+ can ignore this step.
 
 **Attention：Parallel space does not support Android Q version**
 
@@ -96,7 +96,7 @@ Root devices are required to upgrade the certificate to system certificate. Ther
 
 ##### 5.1 Installation
 
-After initializing HttpCanary, find the entrance for installing parallel space in the HttpCanary settings. If it is a 64-bit device, two parallel space installation options will be displayed. Please install them one by one. Mobile phones with Android 8.0 and above will restrict the installation source during the installation. Please choose allow the installation (you can turn off the permissions after completing the installation).
+After initializing HttpCanary, you can find an option for installing parallel space in the HttpCanary settings. If it is a 64-bit device, two parallel space installation options will be displayed. Please install them one by one. Mobile phones with Android 8.0 and above will restrict the installation source during the installation. Please choose allow the installation (you can turn off the permissions after completing the installation).
 
 
 ![](/assets/install_paralle_space.png)
@@ -117,7 +117,7 @@ Use HttpCanary to capture packets from parallel space, then you can capture the 
 
 #### Summary
 
-- For mobile phones with android version below Android 7.0,upgrading to system certificate is not necessary and parallel space installation is also not necessary. It is very friendly to capture packets.
+- For mobile phones with android version below Android 7.0, upgrading to system certificate is not necessary and parallel space installation is also not necessary. It is very friendly to capture packets.
 
 - For mobile phones which system version is 7.0 and higher, upgrade certificate if rooted, install parallel space if not rooted.
 
