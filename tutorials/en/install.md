@@ -10,7 +10,7 @@ HttpCanary uses VPN as a MITM(Man in the Middle) to capture network packets, so 
 
 ####  2. Install root certificate（Necessary）
 
-**Due to Android system's limitations, you must draw your phone screen lock or enter the phone password when installing the certificate. If you have not set them, you need to set a screen lock or password at first.**
+**Due to Android system's limitations, you must draw your phone screen lock or enter the phone password when installing the certificate. If you have not set them, you need to set a screen lock or password first.**
 
 HttpCanary uses MITM(Man in the Middle) technology to capture the network packets or to decrypt the network packets which were encrypted with TLS/SSL in requests of HTTPS, WSS and so on protocols. So you need to install HttpCanary's root certificate first. During installation, click OK by default. Do not modify the configuration.
 
@@ -18,11 +18,11 @@ HttpCanary uses MITM(Man in the Middle) technology to capture the network packet
 
 <br>
 
-####  3. Upgrade the certificate to system certificate（7.0+ Strongly Recommended）
+####  3. Upgrade the certificate to system certificate（Strongly Recommended for Android 7.0 (Android N) & above）
 
-**This step requires a Root device. It is strongly recommended to do this configuration for systems with Android 7.0 and above systems. Skip this step for 5.0-6.0 systems.**
+**This step requires a Rooted device. It is strongly recommended to do this configuration for systems with Android 7.0 and above. Skip this step for 5.0-6.0 systems.**
 
-From Android 7.0(Android N), Google changed the network security policy. The CA certificate installed by user will not be trusted by TLS/SSL connection by default. This means HttpCanary may not capture the packets which encrypted with TLS/SSL and can't connect to network during packet capturing. Therefore, you need to upgrade the certificate installed in last step to the system CA certificate.
+From Android 7.0 (Android N), Google has updated the network security policy. The CA certificate installed by user will not be trusted by TLS/SSL connection by default. This means HttpCanary may not capture the packets which are encrypted with TLS/SSL and can not connect to network during packet capturing. Therefore, you need to upgrade the certificate installed in last step to the system CA certificate.
 
 ##### 3.1 Method one：One-click Upgrade in HttpCanary 
 
@@ -96,7 +96,7 @@ Root devices are required to upgrade the certificate to system certificate. Ther
 
 ##### 5.1 Installation
 
-After initializing HttpCanary, find the entrance for installing parallel space in the HttpCanary settings. If it is a 64-bit device, two parallel space installation options will be displayed. Please install them one by one. Mobile phones with Android 8.0 and above will restrict the installation source during the installation. Please choose allow the installation (you can turn off the permissions after completing the installation).
+After initializing HttpCanary, you can find option for installing parallel space in the HttpCanary settings. If it is a 64-bit device, two parallel space installation options will be displayed. Please install them one by one. Mobile phones with Android 8.0 and above will restrict the installation source during the installation. Please choose allow the installation (you can turn off the permissions after completing the installation).
 
 
 ![](/assets/install_paralle_space.png)
@@ -117,9 +117,9 @@ Use HttpCanary to capture packets from parallel space, then you can capture the 
 
 #### Summary
 
-- For mobile phones with android version below Android 7.0,upgrading to system certificate is not necessary and parallel space installation is also not necessary. It is very friendly to capture packets.
+- For mobile phones with android version below Android 7.0, upgrading to system certificate is not necessary and parallel space installation is also not necessary. It is very friendly to capture packets.
 
-- For mobile phones which system version is 7.0 and higher, upgrade certificate if rooted, install parallel space if not rooted.
+- For mobile phones which system version is 7.0 and higher, upgrade certificate to system certificate if rooted, otherwise install parallel space.
 
 **This is the end of installation tutorial! Start using HttpCanary happily!**
 
